@@ -36,7 +36,7 @@ while True:
     if len(faces):
         dCount+=1
         nCount = 0
-        if(dCount>5 and flag==False):
+        if(dCount>3 and flag==False):
             proxy.Invoke("SET USERSTATUS Online")
             proxy.Invoke("""SET PROFILE MOOD_TEXT "Auto Status Changed : Available  :- http://gitlabs.javra.com/abhishek/skype-auto-status" """)
             print "face Detected"
@@ -50,7 +50,7 @@ while True:
     else:
         dCount = 0
         nCount+=1
-        if(nCount>10 and flag==False):
+        if(nCount>20 and flag==False):
             print "No Face"
             proxy.Invoke("SET USERSTATUS Away")
             proxy.Invoke("""SET PROFILE MOOD_TEXT "Auto Status Changed : Away  :- http://gitlabs.javra.com/abhishek/skype-auto-status" """)
